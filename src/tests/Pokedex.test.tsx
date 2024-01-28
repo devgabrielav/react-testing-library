@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react';
-import App from '../App';
+import { Pokedex } from '../pages';
 import renderWithRouter from '../renderWithRouter';
 import pokemonList from '../data';
 
 test('Teste se a página contém um heading h2 com o texto Encountered Pokémon.', async () => {
-  const { user } = renderWithRouter(<App />);
+  const { user } = renderWithRouter(<Pokedex pokemonList={pokemonList} favoritePokemonIdsObj={{}} />);
   const titulo = screen.getByRole('heading', { name: 'Encountered Pokémon' });
   const buttonNext = screen.getByRole('button', { name: 'Próximo Pokémon' });
 
@@ -31,7 +31,7 @@ test('Teste se a página contém um heading h2 com o texto Encountered Pokémon.
 });
 
 test('Teste se a Pokédex tem os botões de filtro', async () => {
-  const { user } = renderWithRouter(<App />);
+  const { user } = renderWithRouter(<Pokedex pokemonList={pokemonList} favoritePokemonIdsObj={{}} />);
   const buttons = screen.getAllByTestId('pokemon-type-button');
   const buttonA = screen.getByRole('button', { name: 'All' });
   const buttonFire = screen.getByRole('button', { name: 'Fire' });

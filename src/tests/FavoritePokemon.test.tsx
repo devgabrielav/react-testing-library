@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
-import App from '../App';
 import { FavoritePokemon } from '../pages';
 import renderWithRouter from '../renderWithRouter';
+import pokemonList from '../data';
 
 test('É exibida na tela a mensagem No favorite pokemon found caso a pessoa não tenha Pokémon favorito', () => {
   renderWithRouter(<FavoritePokemon />);
@@ -10,16 +10,7 @@ test('É exibida na tela a mensagem No favorite pokemon found caso a pessoa não
 });
 
 test('Apenas são exibidos os Pokémon favoritados', async () => {
-  const { user } = renderWithRouter(<App />);
-
-  const detalhes = screen.getByRole('link', { name: 'More details' });
-  await user.click(detalhes);
-
-  const favoritar = screen.getByRole('checkbox');
-  await user.click(favoritar);
-
-  const goToFavorites = screen.getByRole('link', { name: 'Favorite Pokémon' });
-  await user.click(goToFavorites);
+  renderWithRouter(<FavoritePokemon pokemonList={[pokemonList[0]]}/>);
 
   const nomeP = screen.getByText('Pikachu');
   const star = screen.getByAltText('Pikachu is marked as favorite');

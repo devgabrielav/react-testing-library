@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react';
-import App from '../App';
+import { NotFound } from '../pages';
 import renderWithRouter from '../renderWithRouter';
 
 test('Teste o componente <NotFound.tsx />', () => {
-  renderWithRouter(<App />, { route: '/random' });
+  renderWithRouter(<NotFound />);
   const aspa = '\'';
   const titulo = screen.getByRole('heading', { name: 'Page requested not found' });
   const image = screen.getByAltText(
