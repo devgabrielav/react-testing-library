@@ -1,10 +1,36 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Project React Testing Library
+
+# Context
+This is a Frontend project.
+
+On this project my goal is to create tests, simulating a real user. The application was delivered to me, with front end already built.
+
+## Used technologies
+
+Front-end(not made by me):
+> Developed using: Typescript, CSS, Vite and React.
+
+Tests(made by me):
+> Developed using: React and Testing Library.
+
+## Installing Dependencies
+
+> After cloning the project
+
+```bash
+cd react-testing-library
+npm install
+```
+
+## Running the application
+  
+    
+  ```
+  npm run dev
+  ```
+
+## Running the tests
+
+  ```
+  npm test
+  ```
