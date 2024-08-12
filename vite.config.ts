@@ -5,6 +5,7 @@ import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/react-testing-library/',
   plugins: [react()],
   test: {
     globals: true,

@@ -4,7 +4,7 @@ import App from './App';
 import './index.css';
 
 createRoot(document.getElementById('root') as HTMLElement).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/react-testing-library">
     <App />
   </BrowserRouter>,
 );
